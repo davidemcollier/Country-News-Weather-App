@@ -1,0 +1,21 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Profile for {{countryName}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	 <h4>Currency:</h4> 
+	 <h3 *ngFor="let x of currency">{{x}}</h3>
+	 <br>
+	 <h4>Language:</h4> 
+	 <h3 *ngFor="let x of language">{{x}}</h3>
+	  <br>
+	 <h4>Population:</h4> 
+	 <h3>{{population  | number : fractionSize}}</h3>
+	  <br>
+	 <a href={{mapLink}}><button ion-button>View on Google Maps</button></a>
+
+</ion-content>

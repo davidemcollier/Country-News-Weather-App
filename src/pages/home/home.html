@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      G00398259
+    </ion-title>
+	<ion-buttons end>
+	<button><ion-icon name="settings" (click)="openSettings()"></ion-icon></button>
+</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <h2>{{displayTitle}}  </h2>
+  
+  <div [hidden]="hidden">
+  	
+	<img height="50" [src]="sanitizeImageUrl()">
+	<hr>
+
+	 <h4>Temperature: </h4>
+	<h3> {{temperature}} ({{unitChar}})</h3>
+	
+
+	 <h4>Weather:</h4> 
+	 <h3>{{wDesc}}</h3>
+<img [src]="sanitizeUrl()">
+
+ <h4>Wind From:</h4> 
+ <h3>{{windDir}}</h3>
+	
+	
+	<button ion-button (click)="openNews()">News</button>
+	<button ion-button (click)="openProfile()">Country Profile</button>
+	
+  </div>
+  
+  
+</ion-content>
